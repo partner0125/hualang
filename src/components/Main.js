@@ -38,16 +38,15 @@ function get30DegRandom() {
 let ImgFigure = React.createClass({
 
   /*
-    * imgFigure 的点击处理函数
-    */
+  * imgFigure 的点击处理函数
+  */
   handleClick: function (e) {
-    
     if (this.props.arrange.isCenter) {
       this.props.inverse();
     } else {
       this.props.center();
     }
-
+    
     e.stopPropagation();
     e.preventDefault();
   },
@@ -72,7 +71,7 @@ let ImgFigure = React.createClass({
       styleObj.zIndex = 11;
     }
 
-    var imgFigureClassName = 'img-figure';
+    let imgFigureClassName = 'img-figure';
     imgFigureClassName += this.props.arrange.isInverse ? ' is-inverse' : '';
     
     return (
@@ -92,6 +91,44 @@ let ImgFigure = React.createClass({
     );
   }
 });
+
+// 控制组件
+let controllerUnit = React.createClass({
+  /*
+     * imgFigure 的点击处理函数
+     */
+  handleClick: function (e) {
+    
+    // 如果点击的是当前正在选中态的按钮，则翻转图片,否则将对应的图片居中
+    if (this.props.arrange.isCenter) {
+      this.props.inverse();
+    } else {
+      this.props.center();
+    }
+
+    e.stopPropagation();
+    e.preventDefault();
+  },
+
+  render() {
+    let controlelrUnitClassName = 'controller-unit';
+    // 如果对应的是居中的图片，显示控制按钮的居中态
+    if (this.props.arrange.isCenter) {
+      controlelrUnitClassName += ' is-center';
+
+      // 如果同时对应的是翻转图片， 显示控制按钮的翻转态
+      if (this.props.arrange.isInverse) {
+        controlelrUnitClassName += ' is-inverse';
+      }
+    }
+    return (
+      <span className={controlelrUnitClassName} onClick={this.handleClick}>
+
+      </span>
+    )
+  }
+});
+
 class AppComponent extends React.Component {
   Constant = {
     centerPos: {
@@ -142,7 +179,7 @@ class AppComponent extends React.Component {
       vPosRangeX = vPosRange.x,
 
       imgsArrangeTopArr = [],
-      topImgNum = Math.ceil(Math.random() * 2),    // 取一个或者不取
+      topImgNum = Math.floor(Math.random() * 2),    // 取一个或者不取
       topImgSpliceIndex = 0,
 
       imgsArrangeCenterArr = imgsArrangeArr.splice(centerIndex, 1);
@@ -196,6 +233,8 @@ class AppComponent extends React.Component {
       };
 
     }
+    
+    // debugger;
 
     // 重新合并
     if (imgsArrangeTopArr && imgsArrangeTopArr[0]) {
@@ -298,7 +337,9 @@ class AppComponent extends React.Component {
         }
       }
 
-      imgFigures.push(<ImgFigure data={value} ref={'imgFigure' + index} arrange={this.state.imgsArrangeArr[index]} inverse={this.inverse(index)} center={this.center(index)}/>);
+      imgFigures.push(<ImgFigure key={index} data={value} ref={'imgFigure' + index} arrange={this.state.imgsArrangeArr[index]} inverse={this.inverse(index)} center={this.center(index)}/>);
+      
+      controllerUnits.push(<controllerUnit key={index} arrange={this.state.imgsArrangeArr[index]} inverse={this.inverse(index)} center={this.center(index)}/>);
     }.bind(this));
 
     return (
