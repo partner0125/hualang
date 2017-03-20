@@ -10,19 +10,19 @@
     url("../../fonts/icons/turn-arrow.svg") format("svg");
 }
 
-html,body{
+html, body {
   width:100%;
   height:100%;
   background-color:#222;
 }
 
-.app{
+.app {
   width:100%;
   height:100%;
 }
 
 /* stage -- start */
-.stage{
+.stage {
   position:relative;
   width:100%;
   height:680px;
@@ -30,7 +30,7 @@ html,body{
 /* stage -- end */
 
 /* image -- start */
-.img-sec{
+.img-sec {
   position:relative;
   width:100%;
   height:100%;
@@ -39,7 +39,7 @@ html,body{
 
 	perspective: 1800px;
 
-  @at-root{
+  @at-root {
     .img-figure{
       position: absolute;
 
@@ -56,15 +56,15 @@ html,body{
 			transform-style: preserve-3d;
 			transition: transform .6s ease-in-out,left .6s ease-in-out,top .6s ease-in-out;
 			
-			&.is-inverse{
+			&.is-inverse {
 				transform: translate(320px) rotateY(180deg);
 			}
     }
 
-    figcaption{
+    figcaption {
       text-align: center;
 
-      .img-title{
+      .img-title {
         margin: 20px 0 0 0;
 
         color: #a7a0a2;
@@ -102,7 +102,7 @@ html,body{
 /* image -- end */
 
 /* controller -- start */
-.controller-nav{
+.controller-nav {
   position:absolute;
   left:0;
   bottom:30px;
@@ -111,8 +111,8 @@ html,body{
   text-align:center;
   z-index:101;
 
-	@at-root{
-		.controller-unit{
+	@at-root {
+		.controller-unit {
 			display: inline-block;
 			width: 30px;
 			height: 30px;
@@ -127,7 +127,7 @@ html,body{
 
 			transform: scale(.5);
 			transition: transform .6s ease-in-out,background-color .3s;
-			&.is-center{
+			&.is-center {
 				background-color: #888;
 
 				transform: scale(1);
