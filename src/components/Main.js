@@ -4,6 +4,9 @@ require('../styles/App.scss');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import ImgFigure from '../components/ImgFigure.js';
+import ControllerUnit from '../components/ControllerUnit.js';
+
 //获取图片相关的数据
 let imageDatas = require('../data/imageDatas.json');
 
@@ -34,100 +37,6 @@ function getRangeRandom(low, high) {
 function get30DegRandom() {
   return ((Math.random() > 0.5 ? '' : '-') + Math.ceil(Math.random() * 30));
 }
-
-let ImgFigure = React.createClass({
-
-  /*
-  * imgFigure 的点击处理函数
-  */
-  handleClick: function (e) {
-    if (this.props.arrange.isCenter) {
-      this.props.inverse();
-    } else {
-      this.props.center();
-    }
-    
-    e.stopPropagation();
-    e.preventDefault();
-  },
-
-  render: function () {
-    let styleObj = {};
-
-    // 如果props属性中指定了这张图片的位置，则使用
-    if (this.props.arrange.pos) {
-      styleObj = this.props.arrange.pos;
-    }
-
-    // 如果图片的旋转角度有值并且不为0， 添加旋转角度
-    if (this.props.arrange.rotate) {
-      (['MozTransform', 'msTransform', 'WebkitTransform', 'transform']).forEach(function (value) {
-        styleObj[value] = 'rotate(' + this.props.arrange.rotate + 'deg)';
-      }.bind(this));
-    }
-    
-    // 如果是居中的图片， z-index设为11
-    if (this.props.arrange.isCenter) {
-      styleObj.zIndex = 11;
-    }
-
-    let imgFigureClassName = 'img-figure';
-    imgFigureClassName += this.props.arrange.isInverse ? ' is-inverse' : '';
-    
-    return (
-      <figure className={imgFigureClassName} style={styleObj} onClick={this.handleClick}>
-        <img src={this.props.data.imageURL}
-          alt={this.props.data.title}
-        />
-        <figcaption>
-          <h2 className="img-title">{this.props.data.title}</h2>
-          <div className="img-back" onClick={this.handleClick}>
-            <p>
-              {this.props.data.desc}
-            </p>
-          </div>
-        </figcaption>
-      </figure>
-    );
-  }
-});
-
-// 控制组件
-let ControllerUnit = React.createClass({
-  /*
-     * imgFigure 的点击处理函数
-     */
-  handleClick: function (e) {
-    
-    // 如果点击的是当前正在选中态的按钮，则翻转图片,否则将对应的图片居中
-    if (this.props.arrange.isCenter) {
-      this.props.inverse();
-    } else {
-      this.props.center();
-    }
-
-    e.stopPropagation();
-    e.preventDefault();
-  },
-
-  render() {
-    let controlelrUnitClassName = 'controller-unit';
-    // 如果对应的是居中的图片，显示控制按钮的居中态
-    if (this.props.arrange.isCenter) {
-      controlelrUnitClassName += ' is-center';
-
-      // 如果同时对应的是翻转图片， 显示控制按钮的翻转态
-      if (this.props.arrange.isInverse) {
-        controlelrUnitClassName += ' is-inverse';
-      }
-    }
-    return (
-      <span className={controlelrUnitClassName} onClick={this.handleClick}>
-
-      </span>
-    )
-  }
-});
 
 class AppComponent extends React.Component {
   Constant = {
