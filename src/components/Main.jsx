@@ -4,8 +4,8 @@ require('../styles/App.scss');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ImgFigure from '../components/ImgFigure.js';
-import ControllerUnit from '../components/ControllerUnit.js';
+import ImgFigure from '../components/ImgFigure.jsx';
+import ControllerUnit from '../components/ControllerUnit.jsx';
 
 //获取图片相关的数据
 let imageDatas = require('../data/imageDatas.json');
