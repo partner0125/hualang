@@ -1,15 +1,20 @@
 require('normalize.css/normalize.css');
 require('../styles/App.scss');
+require('../styles/Login.css');
 
 import React from 'react';
-import Section from './Section';
-
-// let yeomanImage = require('../images/yeoman.png');
+// import Section from './Section';
+import LoginForm from './LoginForm';
 
 class AppComponent extends React.Component {
   render() {
     return (
-      <Section />
+      /**
+       * <Section />
+       */
+      // <LoginForm />
+      <div>{this.props.children}</div>
+      
     );
   }
 }
