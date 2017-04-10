@@ -3,8 +3,6 @@ require('../styles/App.scss');
 require('../styles/Login.css');
 
 import React from 'react';
-// import Section from './Section';
-import LoginForm from './LoginForm';
 
 class AppComponent extends React.Component {
   render() {

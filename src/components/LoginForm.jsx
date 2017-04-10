@@ -49,7 +49,7 @@ export default class LoginForm extends React.Component {
 
   handleSubmit() {
     if (this.state.username === 'admin' && this.state.password === '123') {
-      this.context.router.push('/section');
+      this.context.router.push('/albumlist');
     } else {
       alert('用户名或密码错误');
     }
@@ -73,7 +73,12 @@ export default class LoginForm extends React.Component {
           </div>
           <p className="user-login">
             <span className="u_logo"></span>
-            <input className="ipt" onChange={(e) => this.handleChange('username', e)} type="text" placeholder="请输入用户名或邮箱" value={this.state.username} />
+            <input
+              className="ipt"
+              onChange={(e) => this.handleChange('username', e)}
+              type="text" placeholder="请输入用户名或邮箱"
+              value={this.state.username}
+            />
           </p>
           <p className="pwd-login">
             <span className="p_logo"></span>
