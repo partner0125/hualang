@@ -1,6 +1,7 @@
 require('normalize.css/normalize.css');
 require('../styles/App.scss');
 require('../styles/Login.css');
+require('../styles/AlbumList.css');
 
 import React from 'react';
 

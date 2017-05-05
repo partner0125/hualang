@@ -54,6 +54,7 @@ export default class LoginForm extends React.Component {
       alert('用户名或密码错误');
     }
   }
+
   handleChange(name, e) {
     if (name === 'username') {
       this.setState({ username: e.target.value });
@@ -61,6 +62,7 @@ export default class LoginForm extends React.Component {
       this.setState({ password: e.target.value });
     }
   }
+  
   render() {
     return (
       <div>
