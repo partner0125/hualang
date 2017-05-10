@@ -9,6 +9,7 @@ export default class LoginForm extends React.Component {
       username: '',
       password: ''
     }
+    this.handleRegist=this.handleRegist.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
@@ -45,6 +46,10 @@ export default class LoginForm extends React.Component {
       $('#right_hand').attr('class', 'initial_right_hand');
       $('#right_hand').attr('style', 'right:-112px;top:-12px');
     });
+  }
+
+  handleRegist(){
+    this.context.router.push('/regist');
   }
 
   handleSubmit() {
@@ -101,7 +106,7 @@ export default class LoginForm extends React.Component {
                 <a href="#">忘记密码?</a>
               </span>
               <span>
-                <a href="#">注册</a>
+                <a href="avascript:handleRegist()" onClick={this.handleRegist}>注册</a>
                 <button onClick={this.handleSubmit}>登录</button>
               </span>
             </p>

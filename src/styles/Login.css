@@ -1,172 +1,221 @@
-body{
+body {
   background: #ebebeb;
-  font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","\9ED1\4F53",Arial,sans-serif;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "\9ED1\4F53", Arial, sans-serif;
   color: #222;
   font-size: 12px;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
 }
+
+
 /*top_div --start*/
-.top_div{
-	background: #008ead;
-	width: 100%;
-	height: 400px;
+
+.top_div {
+  background: #008ead;
+  width: 100%;
+  height: 400px;
 }
+
+
 /*top_div --end*/
 
+
 /*login-form --start*/
-.login-form{
-	background: rgb(255, 255, 255); 
-	margin: -100px auto auto; 
-	border: 1px solid rgb(231, 231, 231); 
-	border-image: none; 
-	width: 400px; 
-	height: 200px; 
-	text-align: center;
+
+.login-form {
+  background: rgb(255, 255, 255);
+  margin: -100px auto auto;
+  border: 1px solid rgb(231, 231, 231);
+  border-image: none;
+  width: 400px;
+  height: 200px;
+  text-align: center;
 }
+
 
 /*login-form-owl --start*/
-.login-form-owl{
-	width: 165px; height: 96px; position: absolute;
+
+.login-form-owl {
+  width: 165px;
+  height: 96px;
+  position: absolute;
 }
+
 
 /*tou --start*/
-.tou{
-	background: url("../images/tou.png") no-repeat;
-	width: 97px;
-	height: 92px;
-	position: absolute;
-	top: -87px;
-	left: 140px;
-}
-/*initial_left_hand  --start*/
-.initial_left_hand{
-	background: url("../images/hand.png") no-repeat;
-	width: 30px;
-	height: 20px;
-	position: absolute;
-	top: -12px;
-	left: 100px;
-	z-index: 10;
-}
-/*initial_right_hand --start*/
-.initial_right_hand{
-	background: url("../images/hand.png") no-repeat;
-	width: 30px;
-	height: 20px;
-	position: absolute;
-	top: -12px;
-	right: -112px;
-	z-index: 10;
+
+.tou {
+  background: url("../images/tou.png") no-repeat;
+  width: 97px;
+  height: 92px;
+  position: absolute;
+  top: -87px;
+  left: 140px;
 }
 
-.left_hand{
-	background: url("../images/left_hand.png") no-repeat;
-	width: 32px;
-	height: 37px;
-	position: absolute;
-	top: -38px;
-	left: 150px;
+
+/*initial_left_hand  --start*/
+
+.initial_left_hand {
+  background: url("../images/hand.png") no-repeat;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: -12px;
+  left: 100px;
+  z-index: 10;
 }
-.right_hand{
-	background: url("../images/right_hand.png") no-repeat;
-	width: 32px;
-	height: 37px;
-	position: absolute;
-	top: -38px;
-	right: -64px;
+
+
+/*initial_right_hand --start*/
+
+.initial_right_hand {
+  background: url("../images/hand.png") no-repeat;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: -12px;
+  right: -112px;
+  z-index: 10;
 }
+
+.left_hand {
+  background: url("../images/left_hand.png") no-repeat;
+  width: 32px;
+  height: 37px;
+  position: absolute;
+  top: -38px;
+  left: 150px;
+}
+
+.right_hand {
+  background: url("../images/right_hand.png") no-repeat;
+  width: 32px;
+  height: 37px;
+  position: absolute;
+  top: -38px;
+  right: -64px;
+}
+
 
 /*login-form-owl --end*/
 
+
 /*user-login  --start*/
-.user-login{
-	padding: 30px 0px 10px; position: relative;
+
+.user-login {
+  padding: 30px 0px 10px;
+  position: relative;
 }
+
 
 /*u_logo  --start*/
-.u_logo{
-	background: url("../images/username.png") no-repeat;
-	padding: 10px 10px;
-	position: absolute;
-	top: 43px;
-	left: 40px;
+
+.u_logo {
+  background: url("../images/username.png") no-repeat;
+  padding: 10px 10px;
+  position: absolute;
+  top: 43px;
+  left: 40px;
 }
+
 
 /*ipt  --start*/
-.ipt{
-	border: 1px solid #d3d3d3;
-	padding: 10px 10px;
-	width: 290px;
-	border-radius: 4px;
-	padding-left: 35px;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+
+.ipt {
+  border: 1px solid #d3d3d3;
+  padding: 10px 10px;
+  width: 290px;
+  border-radius: 4px;
+  padding-left: 35px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
 }
-.ipt:focus{
-	border-color: #66afe9;
-	outline: 0;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+
+.ipt:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6)
 }
+
 
 /*user-login  --end*/
+
+
 /*pwd-login  --start*/
-.pwd-login{
-	position: relative;
+
+.pwd-login {
+  position: relative;
 }
 
+
 /*p_logo  --start*/
-.p_logo{
-	background: url("../images/password.png") no-repeat;
-	padding: 10px 10px;
-	position: absolute;
-	top: 12px;
-	left: 40px;
+
+.p_logo {
+  background: url("../images/password.png") no-repeat;
+  padding: 10px 10px;
+  position: absolute;
+  top: 12px;
+  left: 40px;
 }
+
 
 /*pwd-login  --end*/
 
+
 /*login-form-ft  --start*/
-.login-form-ft{
-	height: 50px; 
-	line-height: 50px; 
-	margin-top: 30px; 
-	border-top-color: rgb(231, 231, 231); 
-	border-top-width: 1px; 
-	border-top-style: solid;
+
+.login-form-ft {
+  height: 50px;
+  line-height: 50px;
+  margin-top: 30px;
+  border-top-color: rgb(231, 231, 231);
+  border-top-width: 1px;
+  border-top-style: solid;
 }
 
-.login-form-ft>p{
-	margin: 0px 35px 20px 45px;
+.login-form-ft>p {
+  margin: 0px 35px 20px 45px;
 }
-.login-form-ft>p>span:first-child{
-	float: left;
+
+.login-form-ft>p>span:first-child {
+  float: left;
 }
-.login-form-ft>p>span:nth-child(2){
-	float: right;
+
+.login-form-ft>p>span:nth-child(2) {
+  float: right;
 }
-.login-form-ft>p>span:first-child a{
-	color: rgb(204, 204, 204);
+
+.login-form-ft>p>span:first-child a {
+  color: rgb(204, 204, 204);
 }
-.login-form-ft>p>span:nth-child(2) a:first-child{
-	color: rgb(204, 204, 204); margin-right: 10px;
+
+.login-form-ft>p>span:nth-child(2) a:first-child {
+  /*color: rgb(204, 204, 204);*/
+  color: #000;
+  margin-right: 10px;
+  text-decoration: none;
 }
-.login-form-ft>p>span:nth-child(2) button{
-	background: rgb(0, 142, 173); 
-	/*padding: 7px 10px; */
-	width: 50px;
-	height: 50px;
-	border-radius: 4px; 
-	border: 1px solid rgb(26, 117, 152); 
-	border-image: none; 
-	color: rgb(255, 255, 255); 
-	font-weight: bold;
+.login-form-ft>p>span:nth-child(2) a:first-child:hover{
+  text-decoration: underline;
+}
+.login-form-ft>p>span:nth-child(2) button {
+  background: rgb(0, 142, 173);
+  /*padding: 7px 10px; */
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid rgb(26, 117, 152);
+  border-image: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
 
@@ -174,4 +223,3 @@ body{
 
 
 /*login-form --end*/
-
