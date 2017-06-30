@@ -1,0 +1,434 @@
+body {
+  background: #ebebeb;
+  font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "\9ED1\4F53", Arial, sans-serif;
+  color: #222;
+  font-size: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container-div {
+  width: 100%;
+  height: 100%;
+}
+
+.header-div {
+  width: 100%;
+  height: 70px;
+  background: #008ead;
+  margin-bottom: 10px;
+}
+
+.header-container {
+  width: 815px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-container ul {
+  font-size: 18px;
+  font-weight: bold;
+  list-style: none;
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  padding: 10px 0;
+}
+
+.header-container ul li {
+  float: left;
+}
+
+.header-container ul li a {
+  display: block;
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 45px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-container ul li:hover {
+  border-bottom: 2px solid #00ABFC;
+}
+
+.active-li {
+  border-bottom: 2px solid #00ABFC;
+}
+
+.loginUser {
+  position: absolute;
+  top: 0;
+  right: 0;
+  float: right;
+  color: #fff;
+  font-size: 14px;
+  line-height: 70px;
+}
+
+.loginUser .iconcir {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  float: right;
+  margin: 25px 0 0 10px;
+  opacity: 0.1;
+  background: #ddd;
+  position: relative;
+}
+
+.iconcir .icontri {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 10px solid blue;
+  position: absolute;
+  top: 6px;
+  left: 4px;
+}
+
+.userListNone {
+  display: none;
+}
+
+.userList {
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: #ddd;
+}
+
+.userList ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.userList ul li {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #000;
+}
+
+.userList ul li:first-child {
+  border-bottom: 1px solid #999;
+}
+
+.album_wrap {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.crumb_wrap {
+  width: 100%;
+  height: auto;
+}
+
+.crumb {
+  width: 980px;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.crumb_div {
+  font-size: 14px;
+  padding: 10px 0 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.main_wrap {
+  width: 100%;
+}
+
+.main {
+  width: 980px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.album_box,
+.photo_box {
+  width: 813px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.new_album {
+  border-bottom: 1px solid #fff;
+}
+
+.new_photo {
+  border-bottom: 1px solid #FFFFFF;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.photo_box {
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.new_album h2,
+.new_photo h2 {
+  border-bottom: 1px solid #DDDDDD;
+  padding: 10px 0 10px 8px;
+}
+
+.new_album h2 a {
+  font-size: 12px;
+  font-weight: normal;
+  padding-top: 5px;
+  padding-right: 20px;
+  color: #666;
+  float: right;
+  text-decoration: none;
+}
+
+.new_album h2 a:hover {
+  text-decoration: underline;
+}
+
+.new_album_box,
+.new_photo_box {
+  padding: 20px 0 10px;
+}
+
+.box-album {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 184px;
+  padding: 8px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.editdiv {
+  display: none;
+}
+
+.box-album:hover .editdiv {
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: 0;
+}
+
+.box-album .item {
+  width: 173px;
+  height: 148px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.box-album .item img {
+  width: 170px;
+  height: 145px;
+  padding: 6px;
+}
+
+.item-span {
+  width: 182px;
+  height: 30px;
+  line-height: 30px;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+}
+
+.item-span:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.box-album p {
+  color: grey;
+  text-align: center;
+}
+
+
+/*Imgpop*/
+
+.popcontainer {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.dispop {
+  display: none;
+}
+
+.popcontainer .popimg {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  box-sizing: content-box;
+  top: 100px;
+  width: 500px;
+  height: 400px;
+  background: #EBEBEB;
+  border: 10px solid #fff;
+}
+
+
+/*Editpop*/
+
+.editpopContainer {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.diseditpop {
+  display: none;
+}
+
+.editpopContainer .popEdit {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  box-sizing: content-box;
+  top: 180px;
+  width: 458px;
+  height: 310px;
+  background: #fff;
+  box-shadow: 1px 3px 3px 2px #ddd;
+  border-radius: 5px;
+  position: relative;
+}
+
+.editpopContainer .popEdit .editInfo {
+  height: 29px;
+  border-bottom: 1px solid #ddd;
+  background: #F3F3F3;
+}
+
+.editpopContainer .popEdit .editInfo p {
+  font-size: 14px;
+  font-family: "微软雅黑";
+  padding: 3px 0 0 10px;
+}
+
+.editContent {
+  height: 200px;
+}
+
+.editContent .editName,
+.editContent .editPass,
+.editContent .editRepass {
+  height: 20px;
+  margin: 16px 0 20px 70px;
+}
+
+.editContent .editDescribe {
+  margin: 25px 0 20px 70px;
+}
+
+.editContent .editClassify {
+  margin: 20px 0 20px 70px;
+}
+
+.editContent .editName input,
+.editContent .editPass input,
+.editContent .editRepass input, .editContent .editDescribe textarea {
+  width: 260px;
+}
+
+.editContent .editDescribe textarea {
+  height: 80px;
+}
+
+.popEdit .editFoot {
+  width: 100%;
+  height: 60px;
+  background: #F3F3F3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.popEdit .editFoot button:first-child {
+  width: 80px;
+  height: 36px;
+  background: #51B5EB;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  border: none;
+  border-radius: 8px;
+  position: absolute;
+  top: 13px;
+  right: 145px;
+}
+
+.popEdit .editFoot button:nth-child(2) {
+  width: 80px;
+  height: 36px;
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #fff;
+  background: #ddd;
+  border: none;
+  border-radius: 8px;
+  position: absolute;
+  top: 13px;
+  right: 25px;
+  color: #fff;
+}
+
+
+/*eidtpop  --end*/
+
+.imgcontainer {
+  width: 500px;
+  height: 300px;
+  background: #666
+}
+
+.imgcontainer img {
+  width: 500px;
+  height: 300px;
+}
+
+.imgdetail {
+  width: 100%;
+  height: 100px;
+  border-top: 2px solid #00ABFC;
+}
+
+.imgdetail p {
+  line-height: 50px;
+  width: 80%;
+  height: 25px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.imgdetail p span {
+  font-size: 14px;
+}

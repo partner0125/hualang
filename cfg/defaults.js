@@ -44,11 +44,11 @@ function getDefaultModules() {
         loader: 'style-loader!css-loader!less-loader'
       },
       {
-        test: /\.styl/,
+        test: /\.style/,
         loader: 'style-loader!css-loader!stylus-loader'
       },
       {
-        test: /\.(png|jpg|gif|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(png|JPG|jpg|gif|woff|woff2|eot|ttf|svg)$/,
         loader: 'url-loader?limit=8192'
       },
       {

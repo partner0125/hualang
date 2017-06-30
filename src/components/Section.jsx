@@ -6,21 +6,7 @@ import ControllerUnit from '../components/ControllerUnit.jsx';
 
 //获取图片相关的数据
 let imageDatas = require('../data/imageDatas.json');
-
-// let yeomanImage = require('../images/yeoman.png');
-//利用自执行函数，将图片信息转换成图片URL路径信息
-imageDatas = (function genImageURL(imageDatasArr) {
-  for (var i = 0, j = imageDatasArr.length; i < j; i++) {
-    let singleImageData = imageDatasArr[i];
-    
-    singleImageData.imageURL = require('../images/' + singleImageData.fileName);
-    
-    imageDatasArr[i] = singleImageData;
-  }
-  return imageDatasArr;
-})(imageDatas);
-// imageDatas = genImageURL(imageDatas);
-
+imageDatas = imageDatas.img;
 /*
  * 获取区间内的一个随机值
  */
@@ -183,6 +169,20 @@ class Section extends React.Component {
     }
   }
 
+  // let yeomanImage = require('../images/yeoman.png');
+  //利用自执行函数，将图片信息转换成图片URL路径信息
+  imageDatas = (function genImageURL(imageDatasArr) {
+    for (var i = 0, j = imageDatasArr.length; i < j; i++) {
+      let singleImageData = imageDatasArr[i];
+
+      singleImageData.imageURL = require('../images/' + singleImageData.fileName);
+
+      imageDatasArr[i] = singleImageData;
+    }
+    return imageDatasArr;
+  })(imageDatas[this.props.params.id - 1]);
+// imageDatas = genImageURL(imageDatas);
+  
   // 组件加载以后，为每张图片计算其位置的范围
   componentDidMount() {
     //拿到舞台大小
@@ -229,7 +229,7 @@ class Section extends React.Component {
     let controllerUnits = [];
     let imgFigures = [];
 
-    imageDatas.forEach(function (value, index) {
+    imageDatas[this.props.params.id - 1].forEach(function (value, index) {
       
       if (!this.state.imgsArrangeArr[index]) {
         this.state.imgsArrangeArr[index] = {
@@ -242,10 +242,9 @@ class Section extends React.Component {
           isCenter: false
         }
       }
-
-      imgFigures.push(<ImgFigure key={index} data={value} ref={'imgFigure' + index} arrange={this.state.imgsArrangeArr[index]} inverse={this.inverse(index)} center={this.center(index)}/>);
+      imgFigures.push(<ImgFigure key={index} data={value} ref={'imgFigure' + index} arrange={this.state.imgsArrangeArr[index]} inverse={this.inverse(index)} center={this.center(index)} />);
       
-      controllerUnits.push(<ControllerUnit key={index} arrange={this.state.imgsArrangeArr[index]} inverse={this.inverse(index)} center={this.center(index)}/>);
+      controllerUnits.push(<ControllerUnit key={index} arrange={this.state.imgsArrangeArr[index]} inverse={this.inverse(index)} center={this.center(index)} />);
     }.bind(this));
 
     return (
