@@ -54,7 +54,7 @@ export default class LoginForm extends React.Component {
 
   handleSubmit() {
     if (this.state.username === 'admin' && this.state.password === '123') {
-      this.context.router.push('/albumlist');
+      this.context.router.push(`/albumlist/${this.state.username}`);
     } else {
       alert('用户名或密码错误');
     }
@@ -106,7 +106,7 @@ export default class LoginForm extends React.Component {
                 <a href="#">忘记密码?</a>
               </span>
               <span>
-                <a href="avascript:handleRegist()" onClick={this.handleRegist}>注册</a>
+                <a onClick={this.handleRegist}>注册</a>
                 <button onClick={this.handleSubmit}>登录</button>
               </span>
             </p>

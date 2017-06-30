@@ -3,6 +3,7 @@ require('../styles/App.scss');
 require('../styles/Login.css');
 require('../styles/Regist.css');
 require('../styles/AlbumList.css');
+require('../styles/Upload.css');
 
 import React from 'react';
 
