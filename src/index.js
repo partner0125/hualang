@@ -13,11 +13,11 @@ import Uploads from './components/Uploads';
 // Render the main component into the dom
 ReactDOM.render((
   <Router history={hashHistory}>
-    <Route path="/hualang/" component={LoginForm} />
-    <Route path="/hualang/regist" component={RegistForm} />
-    <Route path="/hualang/albumlist" component={AlbumList} />
-    <Route path="/hualang/albumlist/:username" component={AlbumList} />
-    <Route path="/hualang/section/:id" component={Section} />
-    <Route path="/hualang/upload" component={Uploads}/>
+    <Route path="/" component={LoginForm} />
+    <Route path="/regist" component={RegistForm} />
+    <Route path="/albumlist" component={AlbumList} />
+    <Route path="/albumlist/:username" component={AlbumList} />
+    <Route path="/section/:id" component={Section} />
+    <Route path="/upload" component={Uploads}/>
   </Router>
 ), document.getElementById('app'));

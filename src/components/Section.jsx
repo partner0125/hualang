@@ -168,14 +168,12 @@ class Section extends React.Component {
       ]
     }
   }
-
   // let yeomanImage = require('../images/yeoman.png');
   //利用自执行函数，将图片信息转换成图片URL路径信息
   imageDatas = (function genImageURL(imageDatasArr) {
     for (var i = 0, j = imageDatasArr.length; i < j; i++) {
       let singleImageData = imageDatasArr[i];
-
-      singleImageData.imageURL = require('../images/' + singleImageData.fileName);
+      singleImageData.imageURL = singleImageData.fileName;
 
       imageDatasArr[i] = singleImageData;
     }

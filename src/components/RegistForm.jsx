@@ -121,17 +121,17 @@ render() {
               <ul className="author-login-list">
                 <li className="author-login-item">
                   <a className="author-login-qq" href="#">
-                    <img src="images/qq.png" height="22" width="22" />
+                    <img src="http://oum6qj3qr.bkt.clouddn.com/regist_qq.png" height="22" width="22" />
                   </a>
                 </li>
                 <li className="author-login-item">
                   <a className="author-login-weibo" href="#">
-                    <img src="images/weibo.png" height="22" width="22" />
+                    <img src="http://oum6qj3qr.bkt.clouddn.com/regist_weibo.png" height="22" width="22" />
                   </a>
                 </li>
                 <li className="author-login-item">
                   <a className="author-login-taobao" href="#">
-                    <img src="images/taobao.png" height="22" width="22" />
+                    <img src="http://oum6qj3qr.bkt.clouddn.com/regist_taobao.png" height="22" width="22" />
                   </a>
                 </li>
               </ul>

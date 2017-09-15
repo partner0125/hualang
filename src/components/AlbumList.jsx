@@ -193,7 +193,7 @@ export default class AlbumList extends React.Component {
                       </div>
                       <Link to='/section/1'>
                         <div className="item">
-                          <img src="images/img1/20.jpg" />
+                          <img src="http://oum6qj3qr.bkt.clouddn.com/img1_20.jpg" />
                         </div>
                         <div className="item-span">沿海印记</div>
                       </Link>
@@ -205,7 +205,7 @@ export default class AlbumList extends React.Component {
                       </div>
                       <Link to='/section/2'>
                         <div className="item">
-                          <img src="images/img2/MG7.jpg" />
+                          <img src="http://oum6qj3qr.bkt.clouddn.com/MG7.jpg" />
                         </div>
                         <div className="item-span">绿色美景</div>
                       </Link>
@@ -217,7 +217,7 @@ export default class AlbumList extends React.Component {
                       </div>
                       <Link to='/section/3'>
                         <div className="item">
-                          <img src="images/img3/13.jpg" />
+                          <img src="http://oum6qj3qr.bkt.clouddn.com/img3_13.jpg" />
                         </div>
                         <div className="item-span">印象杭州</div>
                       </Link>
@@ -229,7 +229,7 @@ export default class AlbumList extends React.Component {
                       </div>
                       <Link to='/section/4'>
                         <div className="item">
-                          <img src="images/img4/1.jpg" />
+                          <img src="http://oum6qj3qr.bkt.clouddn.com/img4_1.jpg" />
                         </div>
                         <div className="item-span">花香四溢</div>
                       </Link>
@@ -245,72 +245,72 @@ export default class AlbumList extends React.Component {
                   </h2>
                   </div>
                   <div className="new_photo_box">
-                    <div className="box-album" onClick={() => this.handleShowImg('images/1.jpg', 1)}>
+                    <div className="box-album" onClick={() => this.handleShowImg('http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto1.jpg', 1)}>
                       <div className="item">
-                        <img src="images/1.jpg" />
+                        <img src="http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto1.jpg" />
                       </div>
                       <div className="item-span">
                         {this.state.imgInfo[0].name}
                       </div>
                       <p>{this.state.imgInfo[0].upTime}</p>
                     </div>
-                    <div className="box-album" onClick={() => this.handleShowImg('images/2.jpg', 2)}>
+                    <div className="box-album" onClick={() => this.handleShowImg('http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto2.jpg', 2)}>
                       <div className="item">
-                        <img src="images/2.jpg" />
+                        <img src="http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto2.jpg" />
                       </div>
                       <div className="item-span">
                         {this.state.imgInfo[1].name}
                       </div>
                       <p>{this.state.imgInfo[1].upTime}</p>
                     </div>
-                    <div className="box-album" onClick={() => this.handleShowImg('images/3.jpg', 3)}>
+                    <div className="box-album" onClick={() => this.handleShowImg('http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto3.jpg', 3)}>
                       <div className="item">
-                        <img src="images/3.jpg" />
+                        <img src="http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto3.jpg" />
                       </div>
                       <div className="item-span">
                         {this.state.imgInfo[2].name}
                       </div>
                       <p>{this.state.imgInfo[2].upTime}</p>
                     </div>
-                    <div className="box-album" onClick={() => this.handleShowImg('images/4.jpg', 4)}>
+                    <div className="box-album" onClick={() => this.handleShowImg('http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto4.jpg', 4)}>
                       <div className="item">
-                        <img src="images/4.jpg" />
+                        <img src="http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto4.jpg" />
                       </div>
                       <div className="item-span">
                         {this.state.imgInfo[3].name}
                       </div>
                       <p>{this.state.imgInfo[3].upTime}</p>
                     </div>
-                    <div className="box-album" onClick={() => this.handleShowImg('images/5.jpg', 5)}>
+                    <div className="box-album" onClick={() => this.handleShowImg('http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto5.jpg', 5)}>
                       <div className="item">
-                        <img src="images/5.jpg" />
+                        <img src="http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto5.jpg" />
                       </div>
                       <div className="item-span">
                         {this.state.imgInfo[4].name}
                       </div>
                       <p>{this.state.imgInfo[4].upTime}</p>
                     </div>
-                    <div className="box-album" onClick={() => this.handleShowImg('images/6.jpg', 6)}>
+                    <div className="box-album" onClick={() => this.handleShowImg('http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto6.jpg', 6)}>
                       <div className="item">
-                        <img src="images/6.jpg" />
+                        <img src="http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto6.jpg" />
                       </div>
                       <div className="item-span">
                         {this.state.imgInfo[5].name}
                       </div>
                       <p>{this.state.imgInfo[5].upTime}</p>
                     </div>
-                    <div className="box-album" onClick={() => this.handleShowImg('images/7.jpg', 7)}>
+                    <div className="box-album" onClick={() => this.handleShowImg('http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto7.jpg', 7)}>
                       <div className="item">
-                        <img src="images/7.jpg" />
+                        <img src="http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto7.jpg" />
                       </div>
                       <div className="item-span">
                         {this.state.imgInfo[6].name}
                       </div>
                       <p>{this.state.imgInfo[6].upTime}</p>
                     </div>
-                    <div className="box-album" onClick={() => this.handleShowImg('images/8.jpg', 8)}>
+                    <div className="box-album" onClick={() => this.handleShowImg('http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto8.jpg', 8)}>
                       <div className="item">
-                        <img src="images/8.jpg" />
+                        <img src="http://oum6qj3qr.bkt.clouddn.com/albumlist_newPhoto8.jpg" />
                       </div>
                       <div className="item-span">
                         {this.state.imgInfo[7].name}
