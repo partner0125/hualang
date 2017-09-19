@@ -1,0 +1,50 @@
+'use strict';
+
+const path = require('path');
+const args = require('minimist')(process.argv.slice(2));
+
+// List of allowed environments
+const allowedEnvs = ['dev', 'dist', 'test'];
+
+// Set the correct environment
+let env;
+if (args._.length > 0 && args._.indexOf('start') !== -1) {
+  env = 'test';
+} else if (args.env) {
+  env = args.env;
+} else {
+  env = 'dev';
+}
+process.env.REACT_WEBPACK_ENV = env;
+
+/**
+ * Build the webpack configuration
+ * @param  {String} wantedEnv The wanted environment
+ * @return {Object} Webpack config
+ */
+function buildConfig(wantedEnv) {
+  let isValid = wantedEnv && wantedEnv.length > 0 && allowedEnvs.indexOf(wantedEnv) !== -1;
+  let validEnv = isValid ? wantedEnv : 'dev';
+  let config = require(path.join(__dirname, 'cfg/' + validEnv));
+  return config;
+}
+
+module.exports = buildConfig(env);
+
+
+
+
+
+"clean": "rimraf dist/*",
+    "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
+    "dist": "npm run copy & webpack --env=dist",
+    "lint": "eslint ./src",
+    "posttest": "npm run lint",
+    "release:major": "npm version major && npm publish && git push --follow-tags",
+    "release:minor": "npm version minor && npm publish && git push --follow-tags",
+    "release:patch": "npm version patch && npm publish && git push --follow-tags",
+    "serve": "node server.js --env=dev",
+    "serve:dist": "node server.js --env=dist",
+    "start": "node server.js --env=dev",
+    "test": "karma start",
+    "test:watch": "karma start --autoWatch=true --singleRun=false"
